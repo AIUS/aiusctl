@@ -1,0 +1,14 @@
+name: aiusctl
+version: 0.1.0
+
+authors:
+  - Luka  <email@example.com>
+
+description: |
+  Interactive command-line interface for AIUS’ web services.
+
+targets:
+  aiusctl:
+    main: src/aiusctl.cr
+
+license: MIT
