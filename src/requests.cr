@@ -6,10 +6,12 @@ def ask_nicely(type, url, body)
 		"Content-Type" => "application/json"
 	}
 
+	body = body.to_json
+
 	if type == :post
-		HTTP::Client.post url, headers: headers, body: body.to_json
+		HTTP::Client.post url, headers: headers, body: body
 	elsif type == :delete
-		HTTP::Client.delete url, headers: headers, body: body.to_json
+		HTTP::Client.delete url, headers: headers, body: body
 	else type == :get
 		HTTP::Client.get url, headers: headers
 	end
